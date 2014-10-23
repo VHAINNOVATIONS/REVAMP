@@ -1,0 +1,15 @@
+<p>
+   <iframe onload="resizeFrm();" id="frmManual" src="documents/REVAMP.pdf" width="99%" height="800"></iframe>
+</p>
+<script type="text/javascript">
+// <![CDATA[
+
+var resizeFrm = function(){
+  $(document).ready(function(){
+     var pos = $('#frmManual').position();
+     $('#frmManual').height($(window).height() - pos.top - 100);
+  });
+};
+  
+// ]]>
+</script>

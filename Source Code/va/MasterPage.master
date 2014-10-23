@@ -1,0 +1,550 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
+
+<!-- user controls -->
+<%@ Register TagPrefix="ucPatLookup" TagName="ucPatLookup" Src="~/ucPatLookup.ascx" %>
+<%@ Register TagPrefix="ucLogin" TagName="ucLogin" Src="~/ucLogin.ascx" %>
+<%@ Register TagPrefix="ucVerticalMenu" TagName="ucVerticalMenu" Src="~/ucVerticalMenu.ascx" %>
+<%@ Register TagPrefix="ucEncounterType" TagName="ucEncounterType" Src="~/ucEncounterType.ascx" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head2" runat="server">
+    <title>REVAMP Practitioner</title>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    
+    
+    <link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/ExtDDMenu.css" rel="stylesheet" type="text/css" />
+    <link href="css/RevampStyleSheet.css" rel="stylesheet" />
+    <link href="css/cms-css-support.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.6.4.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+
+    <%-- overwrite style for buttons set by Ext.net --%>
+    <style type="text/css">
+        input[type="button"]
+        {
+            padding: 2px 6px;
+        }
+        a.ui-dialog-titlebar-close { display:none }
+    </style>
+    
+    <asp:ContentPlaceHolder ID="cpHeader" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="formMaster" runat="server" defaultbutton="btnNullMaster">
+    
+    <ext:ResourceManager 
+        ID="ResourceManager1" 
+        runat="server" 
+        IDMode="Static" 
+        RegisterAllResources="true" 
+        ScriptAdapter="jQuery" 
+        ScriptMode="Release" 
+        SourceFormatting="false" 
+        Theme="Slate">
+    </ext:ResourceManager>
+    
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+
+    <input type="hidden" id="htxtScrollX" runat="server" enableviewstate="true" />
+    <input type="hidden" id="htxtScrollY" runat="server" enableviewstate="true" />
+    <input type="hidden" id="htxtMainDivWidth" runat="server" enableviewstate="true" />
+    
+    <%-- POPUPS CODE BLOCKS /////////////////////////////////////////////////////////////////////////////////////////////// --%>
+
+    <!-- Patient Lookup Popup -->
+    <ext:Window ID="winPatLookup" runat="server" Title="Patient Lookup" Icon="MagnifierZoomIn"
+        AutoHeight="true" Width="630px" BodyStyle="background-color: #fff;" Padding="5"
+        Collapsible="true" Modal="true" Hidden="true" IDMode="Static" >
+        <Listeners>
+            <BeforeHide Handler="$('[id$=\'btnClearLookupWindow\']').click(); return true;" />
+        </Listeners>
+        <Content>
+            <ucPatLookup:ucPatLookup Visible="true" ID="ucPatLookup" runat="server" />
+            </a>
+        </Content>
+    </ext:Window>
+    <!-- Portal Lookup Popup -->
+
+    <!-- Login Popup -->
+    <ext:Window ID="winLogin" runat="server" Title="Login" Icon="Key" AutoHeight="true"
+        Width="350px" BodyStyle="background-color: #fff;" Padding="5" Collapsible="true"
+        Modal="true" Hidden="true" IDMode="Static">
+        <Content>
+            <ucLogin:ucLogin ID="ucLogin" runat="server" />
+        </Content>
+    </ext:Window>
+    <!-- ends popup reports template -->
+
+    <!-- new encounter/note alert -->
+    <ext:Window ID="winNewEncounter" runat="server" Icon="MagnifierZoomIn"
+        Height="170" Width="460px" BodyStyle="background-color: #fff;" Padding="5"
+        Collapsible="true" Modal="true" Hidden="true" IDMode="Static" Title="NEW ADMIN NOTE">
+        <Content> 
+            <div id="txtAlert">
+                <ucEncounterType:ucEncounterType ID="ucEncounterType" runat="server" />
+                You are about to create a new <span id="newType"></span>&nbsp;for this patient. <br />
+                Do you want to proceed?
+            </div>
+            <div id="divConfirmation" style="margin-top: 5px;">
+                <input type="button" class="button" id="btnYes" value="Yes" disabled="disabled" />&nbsp;&nbsp;
+                <input type="button" class="button" id="btnNo" value="No" onclick="Ext.onReady(function(){winNewEncounter.hide();});" />
+            </div>
+        </Content>
+    </ext:Window>
+    <!-- ends new encounter/note alert -->
+    
+    <!-- Account's Activity Details -->
+    <ext:Window ID="winAccDetails" runat="server" Title="Account Activity" Icon="Information" AutoHeight="true" Width="460" BodyStyle="background-color: #fff;" Padding="5"
+        Collapsible="false" Modal="false" Hidden="true" IDMode="Static">
+        <Content>
+            <%if (Session["ACC_DETAILS"] != null)
+              { %>
+            <%= Session["ACC_DETAILS"].ToString() %>
+            <%} %>
+        </Content>
+    </ext:Window>
+    
+    <%-- ************************************************** --%>
+    <%--                SYSTEM FEEDBACKS                    --%>
+    <%-- ************************************************** --%>
+    <ext:Window ID="winSysFeedback" runat="server" 
+                Collapsible="false" 
+                Modal="true" 
+                Icon="Information"
+                Width="440" 
+                AutoHeight="true" 
+                Hidden="true" 
+                IDMode="Static"  >
+        <Content>
+            <asp:UpdatePanel ID="upSysFeedback" runat="server">
+                <ContentTemplate>
+                    <div id="divSysFeedback" runat="server" style="margin: 5px; width: 100%;">
+                    </div>
+                    <div style="text-align: center; margin: 10px;">
+                        <%if (false)
+                          { %>
+                        <asp:Button ID="btnFeedbackOK" CssClass="button" runat="server" Text="   OK    " OnClick="btnFeedbackOK_OnClick" />
+                        <%} %>
+                        <input type="button" class="button" value="   OK    " onclick="Ext.onReady(function(){winSysFeedback.hide();});" />
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </Content>
+    </ext:Window>
+
+    <%-- END OF POPUPS CODE BLOCKS //////////////////////////////////////////////////////////////////////////////////////// --%>
+   
+    <a name="top"></a>
+    <div id="page" class="rndPage" style="margin: 0 auto; text-align: left;">
+        <!-- top menu bar -->
+        <div id="fixedMenuBar" style="width: 100%; background-color: #fff; display: block;
+            position: relative; left: -2000px; z-index: 1000;">
+            <!-- BEGIN HORIZONTAL NAVIGATION BAR -->
+            <!-- BEGIN HORIZONTAL NAVIGATION BAR -->
+            <!-- BEGIN HORIZONTAL NAVIGATION BAR -->
+            <div id="topMenuContainer" style="background: #f3efec;
+                border-top: 1px solid #e3dad1; border-bottom: 1px solid #e3dad1;">
+                
+                <!-- Gets the Menu HTML string -->
+                <%= strMenuItems %>
+                
+            </div>
+            <!-- HORIZONTAL IMAGE TOOLBAR -->
+            <!-- HORIZONTAL IMAGE TOOLBAR -->
+            <!-- HORIZONTAL IMAGE TOOLBAR -->
+            <% if (this.APPMaster.UserType > 0)
+               { %>
+            <div id="topToolbar" class="tbBar">
+                
+                <!-- Gets the Menu HTML string -->
+                <%= strToolbarItems %>
+                
+                <div class="tbIcon master-save" onclick="return clickedMasterSave();">
+                    <img id="imgMasterSave" runat="server" alt="Save" title="Save" src="Images/hardware-floppy.png"
+                        width="28" height="28" style="padding-top: 4px;" />
+                    <asp:Button ID="btnMasterSave" runat="server" CausesValidation="false" UseSubmitBehavior="false"
+                        Style="display: none;" Text="" />
+                </div>
+
+                <asp:Panel ID="pnlLogoff" runat="server" Visible="false">
+                    <div style="float: right;" class="logoff-bar">
+                        <asp:Image ID="btnEmailNew" runat="server" AlternateText="Open Messages Center" ImageUrl="~/Images/email_new.png" Width="18px" Height="18px" />
+                        <asp:Literal ID="lblUserLoggedOn" runat="server"></asp:Literal>&nbsp;<a class="button-yellow" href="#" onclick="window.location='fx_logoff.aspx';">LOGOFF</a>
+                    </div>
+                    <%--<div style="clear: both;">
+                    </div>--%>
+                </asp:Panel>
+                
+                <div style="clear: both;"></div>
+            </div>
+            <% } %>
+        </div>
+        <!-- END HORIZONTAL NAVIGATION BAR -->
+        <!-- END HORIZONTAL NAVIGATION BAR -->
+        <!-- END HORIZONTAL NAVIGATION BAR -->
+        <!-- Application's feedbacks and alerts -->
+        <div id="contentWrapper" style="overflow: auto;">
+            <div id="divTopSpacer" style="display: block;">
+            </div>
+            
+            <div id="mainContents">
+                <ext:Panel ID="pnlWorkspace" IDMode="Static" runat="server" Layout="BorderLayout" Cls="tree-back" Border="false" >
+                    <Items>
+                        <ext:BorderLayout ID="BorderLayout1" runat="server">
+                            <West Collapsible="true" Split="true" >
+                                <ext:Panel ID="pnlTxTree" runat="server" Width="270" Padding="0" AutoScroll="true" Border="false" BodyCssClass="tree-back" >
+                                    <Content>
+                                        <div id="leftPane" class="leftPane" style="width:100%; overflow: auto; display: block;" runat="server">
+                                          <ucVerticalMenu:ucVerticalMenu ID="ucVerticalMenu" runat="server" />  
+                                        </div>
+                                    </Content>
+                                </ext:Panel>
+                            </West>
+                            <Center>
+                                <ext:Panel ID="pnlMainPanel" runat="server" Border="false" Header="false" BodyStyle="background-color:#fff" >
+                                    <Content>
+                                        <div id="div-demo-logoff-container" style="width: auto; display: block; z-index: 1000;">
+                                            <asp:UpdatePanel ID="upPatientDemo" runat="server">
+                                                <ContentTemplate>
+                                                    <asp:Panel ID="pnlDemoInfoBar" runat="server" Visible="false">
+                                                        <div id="patDemoInfoBar" class="patBar_text" runat="server"></div>
+                                                        <div style="clear: both;"></div>
+                                                    </asp:Panel>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                            <%-- ORIGINAL PLACE FOR LOGOFF PANEL --%>
+                                        </div>
+                                        <!-- page's content goes here -->
+                                        <div id="div-page-contents" style="display: block; margin-left: 5px; overflow: auto; text-align:left;">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                        <!-- End page's content -->
+                                        <div id="divLastModified" runat="server" visible="false" style="margin-top: 6px;
+                                            text-align: right; color: Navy; font-size: 9px; padding: 3px; display: none;
+                                            background-color: #f3efec;">
+                                        </div>
+                                    </Content>
+                                </ext:Panel>
+                            </Center>
+                        </ext:BorderLayout>
+                    </Items>
+                </ext:Panel>
+            </div>
+        </div>
+    </div>
+    
+    <%-- Set null button as default --%>
+    <div style="display: none;">
+        <asp:Button ID="btnNullMaster" CssClass="button" runat="server" UseSubmitBehavior="false" OnClientClick="return false;" />
+    </div>
+    
+    <div class="ajax-loader">
+        <img alt="ajax loader" src="Images/ajax-loader.gif" />
+    </div>
+    
+    <asp:UpdatePanel ID="upKeepAlive" runat="server">
+        <ContentTemplate>
+            <div style="display:none;">
+                <asp:Button ID="btnKeepAlive" CssClass="button" runat="server" OnClick="btnKeepAlive_OnClick" />
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
+<%if (this.IsLoggedIn())
+  { %>
+<div id="dialog" title="Your session is about to expire!" style="display:none;"> 
+	<p><span class="ui-icon ui-icon-alert" style="margin:0 7px 0 0;"></span>Do you want to continue your session?</p>
+</div>
+<%} %>
+    
+   
+    <!-- ENDS FEEDBACKS -->
+    
+
+    </form>
+    <div id="divPPRpts"></div>
+
+    <%-- ********************************************************************************************* --%>
+    <%-- ********************************************************************************************* --%>
+    <%-- ********************************************************************************************* --%>
+    <%-- LOAD ALL JAVASCRIPT AT THE END --%>
+    <%-- ********************************************************************************************* --%>
+    <%-- ********************************************************************************************* --%>
+    <%-- ********************************************************************************************* --%>
+    <script type="text/javascript" src="js/webPractitioner.js"></script>
+    <script type="text/javascript" src="js/appmenu/appmenu.js"></script>
+    <script src="js/menu.js" type="text/javascript" defer="defer"></script>
+    <script src="js/iframe_popups.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="cpScripts" runat="server"></asp:ContentPlaceHolder>
+
+
+    <%if (this.IsLoggedIn()){ %>
+    <script type="text/javascript">
+        var LoggedIn = true;
+
+        function showAccDetails()
+        {
+            var winAcc = Ext.getCmp('winAccDetails');
+            if(winAcc)
+            {
+                winAcc.show();
+                winAcc.setPosition($(window).width() - winAcc.getWidth() - 20, 115, false);
+            }
+        }
+        
+        function showAccDetailsLogin() {
+            var pageName = window.location.href.toLowerCase(),
+                initPages = ['revamp.aspx'];
+            $.each(initPages, function (i, v) {
+                if (pageName.indexOf(v) != -1) {
+                    /*
+                    showAccDetails();
+                    window.accdet = setTimeout(function () {
+                        hideAccDetails();
+                    }, 5000);
+                    */
+                }
+            });
+        }
+        
+        setTimeout(function(){
+            showAccDetailsLogin();
+        }, 100);
+        
+        function hideAccDetails()
+        {
+            var winAcc = Ext.getCmp('winAccDetails');
+            if(winAcc)
+            {
+                winAcc.hide();
+            }
+        }
+        
+        //resize the left vertivcal menu tree js object
+        setTimeout('wp.resizeVerticalMenu();', 350);
+
+        //Session Timeout Alerts
+        if(typeof sessionTimeRemaining != "undefined")
+        {
+            window.clearTimeout(window.sessionTimeout);
+        }
+        
+        var sessionTimeRemaining = <%= strSessionTimeout %>,
+            sessionTimeout = window.setTimeout('timeoutSessionAlert()', sessionTimeRemaining),
+            sessionCountdown,
+            countdownValue,
+            $countdown = $("#dialog-countdown");
+            
+        function LogOff()
+        {
+            window.location.href = "logoff.aspx";
+        }
+
+        function timeoutSessionAlert()
+        {
+            //close popup reports window
+            var ppRpt = Ext.getCmp('popupreport');
+            if(ppRpt)
+            {
+                ppRpt.close();
+            }
+            
+            $("#dialog").dialog('open');
+            clearTimeout(window.sessionTimeout);
+            countdownValue = 18 * 1000;
+            sessionCountdown = window.setTimeout('LogOff()', countdownValue);
+        }
+        
+        function restartSessionTimeout()
+        {
+            clearTimeout(window.sessionTimeout);
+            sessionTimeRemaining = <%= strSessionTimeout %>;
+            sessionTimeout = window.setTimeout('timeoutSessionAlert()', sessionTimeRemaining);
+        }
+        
+        // setup the Session TimeOut alert dialog
+        $("#dialog").dialog({
+            autoOpen: false,
+            modal: true,
+            width: 400,
+            height: 200,
+            closeOnEscape: false,
+            draggable: false,
+            resizable: false,
+            zIndex: 99999,
+            buttons: {
+                'Yes, Keep Working': function()
+                {
+                    clearInterval(window.sessionCountdown);
+                    
+                    $(this).dialog('close');
+
+                    $('[id$="btnKeepAlive"]').each(function()
+                    {
+                        $(this).click();
+                    });
+
+                    clearTimeout(window.sessionTimeout);
+                    sessionTimeRemaining = <%= strSessionTimeout %>;
+                    sessionTimeout = window.setTimeout('timeoutSessionAlert()', sessionTimeRemaining);
+                },
+                'No, Logoff': function()
+                {
+                    LogOff();
+                }
+            }
+        });
+
+    </script>
+    <%} %>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            setTimeout(function(){
+                adjustMainContentsDiv();
+            }, 1);
+        });
+
+        var clearStatusDiv = function(delaySecs)
+        {
+            Sys.onReady(function()
+            {
+                var clDiv = setTimeout('$(\'div[id$="divStatus"]\')[0].innerHTML = \'\'', delaySecs * 1000);
+            });
+        };
+
+        //show errors popup
+        var sysfeedback = function(fmsg)
+        {
+            Ext.onReady(function()
+            {
+                var m_div = $('div[id$="divSysFeedback"]')[0];
+                m_div.innerHTML = fmsg;
+                if (typeof (winSysFeedback) != "undefined")
+                {
+                    winSysFeedback.show();
+                }
+            });
+        };
+
+        var selectedPatientID = '<%= this.SelectedPatientID %>';
+        
+        Sys.onReady(function()
+        {
+            setTimeout(function(){
+                appmenu.init();
+
+                //handle dimensions of workarea panel
+                wp.dimWorkspacePanel();
+
+                wp.adjustMain();
+
+            }, 100);
+        });
+
+        scrollPos.init();
+        
+        
+
+        (function()
+        {
+            var mtop = ($(window).height() - 55) / 2;
+            var mleft = ($(window).width() - 55) / 2;
+            $('div.ajax-loader').css({ top: mtop + 'px', left: mleft + 'px' });
+        })();
+
+        var t = setTimeout("wp.fixMainDiv()", 400);
+
+        $('.date-picker').datepicker({
+            beforeShow: function()
+            {
+                setTimeout('wp.adjustMain()', 100);
+            }
+        });
+
+        var clickedMasterSave = function(sender, args)
+        {
+            scrollPos.getScrollPos();
+            document.getElementById('<%=btnMasterSave.ClientID%>').onclick();
+        };
+
+
+    </script>
+
+     <!-- FEEDBACKS -->
+    <%if (this.StatusComment != "")
+      {
+          if (this.StatusCode > 0)
+          {%>
+        <script type="text/javascript">
+            Sys.onReady(function()
+            {
+                setTimeout(function()
+                {
+                    sysfeedback('<%Response.Write(this.StatusComment);%>');
+                }, 100);
+            });
+        </script>
+
+    <%this.ClearStatus(); }
+      }%>
+
+
+    
+    <%--PIWIK CODE--%>
+    <!-- Piwik --> 
+    
+    <%if(Convert.ToBoolean(ConfigurationManager.AppSettings["UseProductionServerAnalytics"])){ %>
+
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://analytics.intellica.us/" : "http://analytics.intellica.us/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+            piwikTracker.setCustomVariable(1, "UserID", "<%= this.FXUserID %>", "visit");
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+    </script>
+    <noscript>
+        <p>
+            <img src="http://analytics.intellica.us/piwik.php?idsite=2" style="border: 0" alt="" /></p>
+    </noscript>
+
+    <%} else { %>
+    
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://192.168.1.40/piwik/" : "http://192.168.1.40/piwik/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            piwikTracker.setCustomVariable(1, "UserID", "<%= this.FXUserID %>", "visit");
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+    </script>
+    <noscript>
+        <p>
+            <img src="http://192.168.1.40/piwik/piwik.php?idsite=1" style="border: 0" alt="" /></p>
+    </noscript>
+
+    <% } %>
+
+<!-- End Piwik Tracking Code -->
+
+</body>
+</html>

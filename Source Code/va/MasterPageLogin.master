@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageLogin.master.cs" Inherits="MasterPageLogin" %>
+
+<%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
+    <title>REVAMP Practitioner</title>
+    <link href="css/RevampStyleSheet.css" rel="stylesheet" />
+    <script src="js/jquery-1.6.4.js"></script>
+    <script src="js/webPractitioner.js"></script>
+    <script src="js/app/app.js"></script>
+    <asp:ContentPlaceHolder ID="cpHeader" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body class="revamp-body">
+    <form id="frm01" runat="server">
+        <ext:ResourceManager
+            ID="ResourceManager1"
+            runat="server"
+            IDMode="Static"
+            RegisterAllResources="true"
+            ScriptAdapter="jQuery"
+            ScriptMode="Release"
+            SourceFormatting="false"
+            Theme="Slate">
+        </ext:ResourceManager>
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="revamp-main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <%-- ************************************************** --%>
+        <%--                SYSTEM FEEDBACKS                    --%>
+        <%-- ************************************************** --%>
+        <ext:Window ID="winSysFeedback" runat="server"
+            Collapsible="false"
+            Modal="true"
+            Icon="Information"
+            Width="440"
+            AutoHeight="true"
+            Hidden="true"
+            IDMode="Static">
+            <Content>
+                <asp:UpdatePanel ID="upSysFeedback" runat="server">
+                    <ContentTemplate>
+                        <div id="divSysFeedback" runat="server" style="margin: 5px; width: 100%;">
+                        </div>
+                        <div style="text-align: center; margin: 10px;">
+                            <%if (false)
+                              { %>
+                            <asp:Button ID="btnFeedbackOK" CssClass="button" runat="server" Text="   OK    " OnClick="btnFeedbackOK_OnClick" />
+                            <%} %>
+                            <input type="button" class="button" value="   OK    " onclick="Ext.onReady(function () { winSysFeedback.hide(); });" />
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </Content>
+        </ext:Window>
+
+    </form>
+
+    <script type="text/javascript">
+        //show errors popup
+        var sysfeedback = function (fmsg) {
+            Ext.onReady(function () {
+                var m_div = $('div[id$="divSysFeedback"]')[0];
+                m_div.innerHTML = fmsg;
+                if (typeof (winSysFeedback) != "undefined") {
+                    winSysFeedback.show();
+                }
+            });
+        };
+    </script>
+
+
+    <%--PIWIK CODE--%>
+    <!-- Piwik --> 
+    
+    <%if(Convert.ToBoolean(ConfigurationManager.AppSettings["UseProductionServerAnalytics"])){ %>
+
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://analytics.intellica.us/" : "http://analytics.intellica.us/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch (err) { }
+    </script>
+    <noscript>
+        <p>
+            <img src="http://analytics.intellica.us/piwik.php?idsite=2" style="border: 0" alt="" /></p>
+    </noscript>
+
+    <%} else { %>
+    
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://192.168.1.40/piwik/" : "http://192.168.1.40/piwik/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch (err) { }
+    </script>
+    <noscript>
+        <p>
+            <img src="http://192.168.1.40/piwik/piwik.php?idsite=1" style="border: 0" alt="" /></p>
+    </noscript>
+
+    <% } %>
+
+<!-- End Piwik Tracking Code -->
+
+</body>
+</html>

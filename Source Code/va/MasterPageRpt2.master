@@ -1,0 +1,113 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageRpt2.master.cs"
+    Inherits="MasterPageRpt2" %>
+<%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
+
+<!DOCTYPE html>
+
+<script runat="server"></script>
+
+<html>
+<head id="Head2" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
+    <title>REVAMP Practitioner</title>
+    <meta name="Description" content="" />
+    <meta name="KeyWords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="Rating" content="General" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="expires" content="0" />
+    <link href="css/RevampStyleSheet.css" rel="stylesheet" />
+    <link href="css/assessment_report.css" rel="stylesheet" />
+    <script src="js/jquery-1.6.4.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $('div.ajax-loader', $(parent.document)).show();
+        
+        function hideHourglass()
+        {
+            $('div.ajax-loader', $(parent.document)).hide();
+        }
+        
+    </script>
+
+    <asp:ContentPlaceHolder ID="cpHeader" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="formMaster" runat="server">
+    <ext:resourcemanager id="ResourceManager2" runat="server" idmode="Static" registerallresources="true"
+        scriptadapter="jQuery" scriptmode="Release" sourceformatting="false" theme="Slate">
+    </ext:resourcemanager>
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager2" runat="server">
+    </asp:ToolkitScriptManager>
+    <!-- page's content goes here -->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder001" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- End page's content -->
+    
+    <div class="ajax-loader" style="display:none;">
+        <img alt="ajax loader" src="Images/ajax-loader.gif" />
+    </div>
+
+    <script type="text/javascript">
+        $(function()
+        {
+            $('.crtoolbar').css({ width: '773px' });
+
+            var mtop = ($(window).height() - 55) / 2;
+            var mleft = ($(window).width() - 55) / 2;
+            $('div.ajax-loader').css({ top: mtop + 'px', left: mleft + 'px' });
+
+        });
+    </script>
+
+    </form>
+
+
+    <%--PIWIK CODE--%>
+    <!-- Piwik --> 
+    
+    <%if(Convert.ToBoolean(ConfigurationManager.AppSettings["UseProductionServerAnalytics"])){ %>
+
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://analytics.intellica.us/" : "http://analytics.intellica.us/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch (err) { }
+    </script>
+    <noscript>
+        <p>
+            <img src="http://analytics.intellica.us/piwik.php?idsite=2" style="border: 0" alt="" /></p>
+    </noscript>
+
+    <%} else { %>
+    
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://192.168.1.40/piwik/" : "http://192.168.1.40/piwik/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch (err) { }
+    </script>
+    <noscript>
+        <p>
+            <img src="http://192.168.1.40/piwik/piwik.php?idsite=1" style="border: 0" alt="" /></p>
+    </noscript>
+
+    <% } %>
+
+<!-- End Piwik Tracking Code -->
+
+</body>
+</html>
