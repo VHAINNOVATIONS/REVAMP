@@ -1,0 +1,76 @@
+﻿/* -- ucWebQ Style -- */
+body {
+	font-family:Tahoma,Verdana,Arial;font-size:12px;color:black;
+	width:100%;
+	background-color: #FFFFFF;
+	/*margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;*/
+}
+
+.fontDearParagraph
+{
+ font-weight: normal;
+ font-size: 12px;
+ color: black;
+ font-family: geneva,verdana,tahoma,arial;
+}
+
+.fontGoodNewsHeader
+{
+ font-weight: normal;
+ font-size: 18px;
+ color: blue;
+ font-family: geneva,verdana,tahoma,arial;
+}
+.fontGoodNewsFlags
+{
+ font-weight: normal;
+ font-size: 12px;
+ color: black;
+ font-family: geneva,verdana,tahoma,arial;
+}
+
+.fontCriticalHeader
+{
+ font-weight: normal;
+ font-size: 18px;
+ color: blue;
+ font-family: geneva,verdana,tahoma,arial;
+}
+.fontCriticalItemsFlags
+{
+ font-weight: normal;
+ font-size: 12px;
+ color: black;
+ font-family: geneva,verdana,tahoma,arial;
+}
+.fontHighPriorityHeader
+{
+ font-weight: normal;
+ font-size: 18px;
+ color: blue;
+ font-family: geneva,verdana,tahoma,arial;
+}
+.fontHiPriorityItemsFlags
+{
+ font-weight: normal;
+ font-size: 12px;
+ color: black;
+ font-family: geneva,verdana,tahoma,arial;
+}
+.fontTopicHeader
+{
+ font-weight: normal;
+ font-size: 18px;
+ color: blue;
+ font-family: geneva,verdana,tahoma,arial;
+}
+.fontTopicItemsFlags
+{
+ font-weight: normal;
+ font-size: 12px;
+ color: black;
+ font-family: geneva,verdana,tahoma,arial;
+}

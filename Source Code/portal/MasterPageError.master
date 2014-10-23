@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageError.master.cs" Inherits="MasterPageError" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
+    <title>WebSUAT Error</title>
+    <link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.6.4.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

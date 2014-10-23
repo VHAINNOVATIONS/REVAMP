@@ -1,0 +1,67 @@
+/* Elements */
+input[type="submit"], input[type="button"]
+{
+	padding: 2px 6px;
+}
+
+input[type="checkbox"]
+{
+	margin-right: 5px;
+}
+
+
+/* page design */
+
+.adhocMainWrapper
+{
+	display: block;
+	margin: 20px;
+}
+
+.adhoc-main-table
+{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.adhoc-main-table th, .adhoc-table th
+{
+	padding: 3px 6px;
+	/*color: #2E6E9E;*/
+	color: #000;
+	background: #F3EFEC;
+	vertical-align: middle;
+	font-size: 14px;
+	/*font-weight: bold;*/
+}
+
+.adhoc-table-third td
+{
+	vertical-align: top;
+}
+
+.div-list-container
+{
+	width: auto;
+	border: 1px solid #e1e1e1;
+	padding: 10px;
+}
+
+.div-list
+{
+	height: 100px;
+	overflow: auto;
+}
+
+.div-report_output input[type="checkbox"]
+{
+	margin-right: 5px;
+}
+
+.splink-check, .splink-uncheck, .checkall, .uncheckall
+{
+	text-decoration: underline;
+	color: #2E6E9E;
+	cursor: pointer;
+	font-size: 10px;
+}

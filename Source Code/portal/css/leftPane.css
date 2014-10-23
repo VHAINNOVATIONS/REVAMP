@@ -1,0 +1,381 @@
+/* StyleSheet for left pane */
+
+#leftPane, .leftPane
+{
+	width: 255px;
+	background: #f3efec;
+	/*
+    float: left;
+    background: #e6e7e8 url('images/lp_rightGradient.png') repeat-y top right;
+    border-right: 1px solid #e3dad1;
+	margin-right: 5px;
+	padding-right: 25px;
+    */
+}
+
+.tree-back
+{
+background: #f3efec;
+}
+
+a.linkButton
+{
+	display: block;
+	text-align: left;
+	width: 186px;
+	margin-top: 5px;
+	background: #326699 url('images/lp_lnkBtngBack.png') repeat-y top left;
+	padding: 4px 4px 4px 10px;
+	color: #fff;
+	font: normal 14px Verdana, Arial, sans-serif;
+	text-decoration: none;
+}
+
+a.linkButton:hover
+{
+	color: #f5eb28;
+}
+
+.linksBlock
+{
+	margin-top: 5px;
+	text-align: left;
+	width:200px;
+	padding: 2px 0px 5px 0;
+	border-top: 1px solid #bbbdbf;
+	border-bottom: 1px solid #bbbdbf;
+	background-color: #f1f1f2;
+}
+
+.rfrWrapper
+{
+	margin-top: 3px;
+}
+
+.rfrDate
+{
+	float: left;
+	margin-left: 5px;
+	color: #1b75bb;
+	font: normal 10px Verdana, Arial, sans-serif;
+	text-align: right;
+	width: 65px;
+}
+
+.rfrDesc
+{
+	float: left;
+	margin-left: 5px;
+	width: 105px;
+	text-align: left;
+	color: #000;
+	font: normal 10px Verdana, Arial, sans-serif;
+}
+
+a.linkBulleted
+{
+	display: block;
+	text-decoration: none;
+	text-align: left;
+	background: url('images/lp_iconSignedSM.png') no-repeat top left;
+	/*background: url('images/padlock_open.png') no-repeat top left;*/
+	/*background: url('images/lp_bulletArrow.png') no-repeat top left;*/
+	padding-left: 20px;
+	padding-right: 5px;
+	margin-left: 10px;
+	margin-top: 3px;
+	/*width: 160px;*/
+	color: #000;
+	font: normal 12px Verdana, Arial, sans-serif;
+}
+
+a.linkRegBullet
+{
+	display: block;
+	text-decoration: none;
+	text-align: left;
+	background: url('images/grayBullet.png') no-repeat center left;
+	padding-left: 15px;
+	padding-right: 5px;
+	margin-left: 10px;
+	margin-top: 3px;
+	color: #000;
+	font: normal 12px Verdana, Arial, sans-serif;
+}
+
+a.linkBulletedClosed
+{
+	display: block;
+	text-decoration: none;
+	text-align: left;
+	background: url('images/lp_bulletArrow.png') no-repeat top left;
+	/*background: url('images/lock2.png') no-repeat top left;*/
+	padding-left: 20px;
+	padding-right: 5px;
+	margin-left: 10px;
+	margin-top: 3px;
+	/*width: 160px;*/
+	color: #000;
+	font: normal 12px Verdana, Arial, sans-serif;
+	cursor: pointer;
+}
+
+
+a.linkBulleted:hover, a.linkBulletedClosed:hover
+{
+	text-decoration: underline;
+	color: #1b75bb;
+}
+
+.leftPane h2
+{
+	display: block;
+	text-align: left;
+	width: 186px;
+	margin: 5px 0;
+	background: #326699 url('images/lp_lnkBtngBack.png') repeat-y top left;
+	padding: 4px 4px 4px 10px;
+	color: #fff;
+	font: bold 12px Verdana, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.leftPane h3
+{
+	color: #1b75bb;
+	text-transform: uppercase;
+	font: bold 12px Verdana, Arial, sans-serif;
+	margin: 5px 0px 5px 10px;
+}
+
+a.collapsible, span.collapsible
+{
+	display: block;
+	color: #1b75bb;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 12px Verdana, Arial, sans-serif;
+	margin: 5px 0px 5px 10px;
+}
+
+a.collapsibleGray, span.collapsibleGray
+{
+	display: block;
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 12px Verdana, Arial, sans-serif;
+	margin: 5px 0px 5px 10px;
+}
+
+.encounterContainer
+{
+	width: 180px;
+	margin: 0 0 6px 10px;
+	text-align: left;
+}
+
+.btnEncounter
+{
+	float: left;
+	margin-left: 0px;
+	background: url('images/lp_btnBack_SM.png') no-repeat center center;	
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	width: 120px;
+	height: 22px;
+}
+
+.btnEncounterGray
+{
+	float: left;
+	margin-left: 0px;
+	background: url('images/lp_btnBack_gray_SM.png') no-repeat center center;	
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	width: 120px;
+	height: 22px;
+}
+
+.caseIcon
+{
+	float: left;
+	width: 20px;
+	height: 20px;	
+}
+
+.signed
+{
+	display: none;
+	margin-right: 5px;
+	background: url('images/lp_iconSigned.png') no-repeat center center;	
+}
+
+.closed
+{
+	display: none;
+	margin-right: 5px;
+	background: url('images/lp_iconClosed.png') no-repeat center center;	
+}
+
+.lblEncounter
+{ 
+	display:block; 
+	width:100%; 
+	padding-top:3px; 
+	text-align:center; 
+	font:bold 11px Verdana, Arial, Helvetica, sans-serif; 
+	color:#fff;
+}
+
+.btnsAssessments
+{
+	clear: both;
+	text-align: left;
+}
+
+.btnCounselorAssessment
+{
+	display: block;
+	float: left;
+	margin-left: 5px;
+	width: 59px;
+	height: 22px;
+	background: url('images/lp_btnCounselor_SM.png') no-repeat center left;
+	cursor: pointer;	
+}
+
+.btnPatientAssessmentGray
+{
+	display: block;
+	float: left;
+	width: 59px;
+	height: 22px;
+	margin-left: 10px;
+	background: url('images/lp_btnPatAssessment_gray_SM.png') no-repeat center left;
+	cursor: pointer;
+}
+
+.btnCounselorAssessmentGray
+{
+	display: block;
+	float: left;
+	margin-left: 5px;
+	width: 59px;
+	height: 22px;
+	background: url('images/lp_btnCounselor_gray_SM.png') no-repeat center left;
+	cursor: pointer;	
+}
+
+.btnPatientAssessment
+{
+	display: block;
+	float: left;
+	width: 59px;
+	height: 22px;
+	margin-left: 10px;
+	background: url('images/lp_btnPatAssessment_SM.png') no-repeat center left;
+	cursor: pointer;
+}
+
+.divCounselorAssessments
+{
+	margin: 5px;
+	padding-top: 2px;
+	padding-bottom: 8px;
+	background-color: #dff6ff;
+	border: 1px dotted #1b75bb;
+}
+
+.divPatientAssessments
+{
+	margin: 5px;
+	padding-top: 2px;
+	padding-bottom: 8px;
+	background-color: #eeffdf;
+	border: 1px dotted #009345;	
+}
+
+.divCounselorAssessments h4
+{
+	font: bold 10px Verdana, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #1b75bb;
+	margin: 5px 0px 5px 10px;
+}
+
+.divPatientAssessments h4
+{
+	font: bold 10px Verdana, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #009345;
+	margin: 5px 0px 5px 10px;	
+}
+
+.divAssessmentsGray
+{
+	margin: 5px;
+	padding-top: 2px;
+	padding-bottom: 8px;
+	background-color: #ebebec;
+	border: 1px dotted #808080;
+}
+
+.divAssessmentsGray h4
+{
+	font: bold 10px Verdana, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #000;
+	margin: 5px 0px 5px 10px;
+}
+
+.treatHdFrameGray
+{
+	display: block;
+	text-align: left;
+	width: 186px;
+	margin: 5px 0;
+	/* background: #4b4b4b url('images/lp_lnkBtngBack_gray.png') repeat-y top left; */
+	background: #989898;
+	padding: 4px 4px 4px 10px;
+	color: #fff;
+}
+
+.treatHd
+{
+    display: block;
+    padding-top: 4px;
+    font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+/*
+-----------------------------------------
+*/
+#contentsFrame
+{
+	float: left;
+	margin-left: 15px;
+	background-color: #e1e1e1;
+	width: 600px;
+	height: 600px;
+}
+
+.scrollEncounters
+{
+    /*
+    height: 215px;
+    overflow: auto;
+    */
+}
+
+.enctype
+{
+    font: normal .75em Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #808080;
+    padding-top: 2px;
+    margin-right: 10px;
+}

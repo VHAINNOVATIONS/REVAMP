@@ -1,0 +1,99 @@
+﻿/* topic styles **************/
+/* topic styles **************/
+/* topic styles **************/
+.TopicText
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:large;
+	font-weight:bold;
+	text-decoration:none;
+	color:#2F61B1;
+}
+
+.AssessmentProgress
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:medium;
+	font-weight:normal;
+	text-decoration:none;
+	color:#2F61B1;
+}
+
+/* question styles ***********/
+/* question styles ***********/
+/* question styles ***********/
+.QuestionText
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:large;
+	font-weight:bold;
+	text-decoration:none;
+	color:#000000;
+}
+
+/* response styles ***********/
+/* response styles ***********/
+/* response styles ***********/
+.ClickResponseBar
+{
+    background-color:#CEDAE2;
+    cursor:pointer;
+}
+
+.ResponseText
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:medium;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000000;
+}
+
+.ResponseAnchor A:link
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:medium;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000000;
+}
+
+.ResponseAnchor A:visited
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:medium;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000000;
+}
+
+.ResponseAnchor A:active
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:medium;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000000;
+}
+
+.ResponseAnchor A:hover
+{
+	font-family:Geneva, Verdana, Arial, 'sans-serif';
+	text-align:left;
+	font-size:medium;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000000;
+}
+
+.ResponseImage
+{
+	cursor:pointer;
+}

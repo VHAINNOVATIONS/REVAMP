@@ -1,0 +1,78 @@
+﻿.logoff-bar {
+    font-size: .66em;
+}
+
+[id$="divQuestions"] 
+{
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+[id$="divQuestions"] strong 
+{
+    font-weight: bold;
+}
+
+[id$="divQuestions"] h1, h2, h3, h4
+{
+    color: #3F4E8A;
+    margin-bottom:20px;
+	text-align: left;
+}
+
+[id$="divQuestions"] h1
+{
+    font-size: 30px;
+}
+
+[id$="divQuestions"] h2
+{
+    font-size: 28px;
+}
+
+[id$="divQuestions"] h3
+{
+    font-size: 25px;
+}
+
+[id$="divQuestions"] h4
+{
+    font-size: 22px;
+}
+
+[id$="divQuestions"] h5
+{
+    font-size: 18px;
+}
+
+
+[id$="divQuestions"] label, strong, span, div, input[type="text"]
+{
+    font-size: 18px;
+}
+        
+.intake-wrapper
+{
+    font-family: Sans-Serif;
+}
+        
+[id$="divQuestions"] td
+{
+    vertical-align: top;
+}
+        
+[id$="divQuestions"] td div
+{
+    margin: 5px 0 5px 15px;
+}
+
+[id$="divQuestions"] input[type="radio"] 
+{
+    margin-right: 10px;
+}
+
+[id$="divQuestions"] input[type="checkbox"] 
+{
+    margin-right: 10px;
+}
+

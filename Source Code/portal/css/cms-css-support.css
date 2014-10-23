@@ -1,0 +1,105 @@
+.cms-contents a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cms-contents h1 {font-size: 2em}
+.cms-contents h2 {font-size: 1.5em}
+.cms-contents h3 {font-size: 1.17em}
+.cms-contents h4 {font-size: 1em}
+.cms-contents h5 {font-size: .83em}
+.cms-contents h6 {font-size: .75em}
+.cms-contents ins {border-bottom:1px solid green; text-decoration: none; color:green}
+.cms-contents del {color:red; text-decoration:line-through}
+.cms-contents cite {border-bottom:1px dashed blue}
+.cms-contents acronym {border-bottom:1px dotted #CCC; cursor:help}
+.cms-contents abbr {border-bottom:1px dashed #CCC; cursor:help}
+
+.cms-contents h1,
+.cms-contents h2,
+.cms-contents h3 {
+	margin: 1em 0;
+}
+
+.cms-contents h1,
+.cms-contents h2,
+.cms-contents h3,
+.cms-contents h4,
+.cms-contents h5,
+.cms-contents h6,
+.cms-contents strong,
+.cms-contents dt,
+.cms-contents b {
+	font-weight: bold;
+}
+
+.cms-contents optgroup {
+	font-weight:normal;
+}
+
+.cms-contents abbr,
+.cms-contents acronym {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+.cms-contents em {
+	font-style: italic;
+}
+
+.cms-contents blockquote,
+.cms-contents ul,
+.cms-contents ol,
+.cms-contents dl {
+	margin: 1em;
+}
+
+.cms-contents ol,
+.cms-contents ul,
+.cms-contents dl {
+	margin-left: 2em;
+}
+
+.cms-contents ol {
+	list-style: decimal outside;
+}
+
+.cms-contents ul {
+	list-style: disc outside;
+}
+
+.cms-contents dl dd {
+	margin-left: 1em;
+}
+
+.cms-contents th,
+.cms-contents td {
+	border: 1px solid #000;
+	padding: .5em;
+}
+
+.cms-contents th {
+	font-weight: bold;
+	text-align: center;
+}
+
+.cms-contents caption {
+	margin-bottom: .5em;
+	text-align: center;
+}
+
+.cms-contents sup {
+	vertical-align: super;
+}
+
+.cms-contents sub {
+	vertical-align: sub;
+}
+
+.cms-contents p,
+.cms-contents fieldset,
+.cms-contents table,
+.cms-contents pre {
+	margin-bottom: 1em;
+}

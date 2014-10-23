@@ -1,0 +1,64 @@
+﻿.tp-div-chart
+{
+    width: 80%;
+    height: 380px;
+    margin:0 auto;
+    border: solid 1px #999;
+}
+
+.tp-tab-extender
+{
+    padding: 10px;
+    border-top: none;
+    border-left:solid 1px #999;
+    border-bottom:solid 1px #999;
+    border-right:solid 1px #999;
+}
+
+.tp-selected
+{
+    background-color: #BDCEDE;
+}
+
+/*
+********************************************************************
+********************************************************************
+        Custom style for AjaxControlToolkit's Tabs
+********************************************************************
+********************************************************************
+*/
+
+/* default layout */
+.ajax__tab_default .ajax__tab_header {white-space:normal !important}
+.ajax__tab_default .ajax__tab_outer {display:-moz-inline-box;display:inline-block}
+.ajax__tab_default .ajax__tab_inner {display:-moz-inline-box;display:inline-block}
+.ajax__tab_default .ajax__tab_tab {overflow:hidden;text-align:center;display:-moz-inline-box;display:inline-block}
+
+/* xp theme */
+.custom-tabs .ajax__tab_header {font-family:verdana,tahoma,helvetica;font-size:11px;background:url(WebResource.axd?d=MytBUI_a8Di5YrAqs3RgmD4UUQQp0ghnOJDlH-_wsD_hPxKW9T0veOm3JRS8QcAdIZwWKOxX-9Amd-ujIk_yNRQHWiXqyLXdcG2h7sC382YSL5AN0&t=634568757405349282) repeat-x bottom;}
+.custom-tabs .ajax__tab_outer {padding-right:4px;background:url(WebResource.axd?d=D1sodBnPxkyL-gAoUO34u0rQSdkoIbvjCnpRuKyq4waEE-mapX1Yq2s37zJBOHU2ttM4UfCCukffBM5ais-H326171roB-yFVQOy2r4vVrvndx_-0&t=634568757405349282) no-repeat right;height:21px;}
+.custom-tabs .ajax__tab_inner {padding-left:3px;background:url(WebResource.axd?d=1N5VwWlCXRgFE3kdteXlAsVGtjMg5oRCsFCN6IvBk8xd8bCHYqyAGcmQUwIOy2MhiNQRvVIrmgXenyoL6xAejh5rs2iSN3w_EphWQUbYp2wUeq_T0&t=634568757405349282) no-repeat;}
+.custom-tabs .ajax__tab_tab {height:13px;padding:4px;margin:0px;background:url(WebResource.axd?d=QAdoMTVuErVWJpgQPlyIFl726rxxAbokstGZZhYe7PqInr9v2Y-2uoKPf0ojBoBW7xMC35gPFwG6YSH_NTTsqKafpEoZ95KPpGVi1Dv68JrtWoXI0&t=634568757405349282) repeat-x;}
+.custom-tabs .ajax__tab_hover .ajax__tab_outer {cursor:pointer;background:url(WebResource.axd?d=nzF_s4P3ChVDtXJv-oOs9oR1SoXUZyLrrwq_l1sG7Z7b-rBMjHjv3uEPiCRqyljWCi_3sA-K4oeCzc_UZbxPxRC2KZxUQnLgh_Wm30QrwxlFP4yqb7P7Nw0btD81&t=634568757405349282) no-repeat right;}
+.custom-tabs .ajax__tab_hover .ajax__tab_inner {cursor:pointer;background:url(WebResource.axd?d=7h0XdHlSiQ7zHNYTbxRqSKBrbQgOZmL9NpEo-Rq8GxK-eFfoGNn7myMTMFLy2VJKCV-BR32-aKb5wvaNqJGOUmEd31MqpsCewMNs2gharA83bKtRAyUeHjrTUKk1&t=634568757405349282) no-repeat;}
+.custom-tabs .ajax__tab_hover .ajax__tab_tab {cursor:pointer;background:url(WebResource.axd?d=PZNHBBRQoVdNOvMWn-MxY0vhgF9CzkbhWJKtvs_gnvinqyIdi3pC7eTn9jbUlLcusHTX-RtoYlzE95r0LBRNmvsqgLvNCOlXZLC0yTfJ4n4wIobe0&t=634568757405349282) repeat-x;}
+.custom-tabs .ajax__tab_active .ajax__tab_outer {background:url(WebResource.axd?d=6-p0MN8q80SpcNLqazAAIziG0BTjcRSB5r1iaboD5ysGzltC24hfdxOfXcwlu1Wu9V6GPMihWl1eRpoufphrZpgyYhsKWTW7jnfOUxwBO4RKp_JjnjhaSsv9aqk1&t=634568757405349282) no-repeat right;}
+.custom-tabs .ajax__tab_active .ajax__tab_inner {background:url(WebResource.axd?d=VkOAlEnClu55PEpgWnYwC3UVtYxLg_IN6EIU4s2i6Cg7wx-J3lTqLmwdmLqZDD9EzkYiTPu4QZO1m-Pa59JU9Ysfp0ys25FW7edQuj6aMCS0XIk51JsIvPmDn081&t=634568757405349282) no-repeat;}
+.custom-tabs .ajax__tab_active .ajax__tab_tab {background:url(WebResource.axd?d=r3Lkl2HoOyvQW1J5iwEm0m6_u4cIiuWl2E1mBppH1GiFpGxpdqqog5XfFwVPsPq5uPWoI1ILy9E8hxNioMIgIf3z91THuHsWnN9bwe5OvPd0Cbdu0&t=634568757405349282) repeat-x;}
+.custom-tabs .ajax__tab_disabled { color: #A0A0A0;}
+.custom-tabs .ajax__tab_body {font-family:verdana,tahoma,helvetica;font-size:10pt;border:0px solid #999999;border-top:0;padding:0px;background-color:#ffffff;}
+
+/* scrolling */
+.ajax__scroll_horiz {overflow-x:scroll;}
+.ajax__scroll_vert {overflow-y:scroll;}
+.ajax__scroll_both {overflow:scroll}
+.ajax__scroll_auto {overflow:auto}
+
+/* plain theme */
+/*
+.custom-tabs .ajax__tab_outer {text-align: center; vertical-align: middle; border:2px solid #999999;}
+.custom-tabs .ajax__tab_inner {text-align: center; vertical-align: middle; }
+.custom-tabs .ajax__tab_body {text-align: center; vertical-align: middle;}
+.custom-tabs .ajax__tab_header {text-align: center; vertical-align: middle;}
+.custom-tabs .ajax__tab_active .ajax__tab_outer {background:#FFFFE1;}
+*/

@@ -1,0 +1,783 @@
+﻿/*settings for body*/
+body
+{
+    background-position: left top;
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFF;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal; 
+    /*
+    background-color: #003a6a;
+    background-image: url( '../Images/menu_hz_bar.png' );
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    */
+}
+
+#divStatusInfo
+{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.spacer
+{
+    padding: 5px 0px;
+}
+
+.rndBox
+{
+    background: url('../Images/secttranspback.png') repeat center center;
+    margin: 0 auto;
+    color: #000000;
+    width: 86%;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #c1c1c1;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    ccborderradius: 20px;
+    border-radius: 20px;
+    behavior: url(border-radius.htc);
+}
+
+/*default font for tables*/
+table
+{
+    color: #000000;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*default font for div*/
+div
+{
+    color: #000000;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*default font for links*/
+a
+{
+    color: #000000;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.a_small
+{
+    color: #000000;
+    font: 9px Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*custom fonts*/
+.font_success
+{
+    color: Green;
+    font: small Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.font_error
+{
+    color: Red;
+    font: small Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.font_header1
+{
+    color: Black;
+    font: 18px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.font_header2
+{
+    color: Black;
+    font: 16px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.font_header3
+{
+    color: Black;
+    font: 14px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.font_subtitle
+{
+    color: #006600;
+    font: 16px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: bold;
+}
+
+.font_help
+{
+    color: Black;
+    font: 13px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.font_body1
+{
+    color: Black;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+.gv
+{
+    background: White;
+    text-align: left;
+    font-size: 11px;
+    color: black;
+    font-family: geneva,verdana,tahoma,arial;
+    width: 99%;
+}
+.gv_red
+{
+    background: Red;
+    text-align: left;
+    font-size: 11px;
+    color: black;
+    font-family: geneva,verdana,tahoma,arial;
+    width: 99%;
+}
+.gv_rowstyle
+{
+    background: White;
+    vertical-align: text-top;
+    text-align: left;
+    font-size: 11px;
+    color: #003366;
+    font-family: geneva,verdana,tahoma,arial;
+}
+
+/*
+.gv_rowstyle td
+{
+    text-align: left;
+}
+*/
+
+.gv_rowstyle_red
+{
+    background: Red;
+    vertical-align: text-top;
+    text-align: left;
+    font-size: 11px;
+    color: #003366;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.gv_pagerstyle
+{
+    background: White;
+    vertical-align: text-top;
+    text-align: left;
+    font-size: 11px;
+    color: #003366;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.gv_alternating
+{
+    background: GhostWhite;
+    vertical-align: text-top;
+    text-align: left;
+    font-size: 11px;
+    color: #003366;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.gv_headerstyle
+{
+    background: Silver;
+    font-weight: normal;
+    font-size: 10px;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.gv_itemstyle
+{
+    vertical-align: text-top;
+    text-align: left;
+    font-size: 11px;
+    font-family: geneva,verdana,tahoma,arial;
+}
+
+.gv_link a.link
+{
+    color: blue;
+    text-decoration: underline;
+}
+
+.gv_link a.link:visited
+{
+    color: blue;
+    text-decoration: underline;
+}
+
+.gv_link a.link:hover
+{
+    color: purple;
+    text-decoration: underline;
+}
+
+.gv_link a.link:active
+{
+    color: blue;
+}
+
+
+/*styles for group by page in reports*/
+.group_by th
+{
+    width: 510px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: normal;
+}
+
+.group_by div
+{
+    vertical-align: top;
+    text-align: left;
+    height: 200px;
+    width: 510px;
+    font-size: 12px;
+}
+
+/* Begin testing for iPad CSS Classes alternation */
+.ctrStyle
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+.ctrStyle100
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    width: 100px;
+}
+.ctrStyle175
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    width: 175px;
+}
+.ctrStyle200
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    width: 200px;
+}
+.ctrStyle225
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    width: 225px;
+}
+.ctrStyle250
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    width: 250px;
+}
+.ctrStyle300
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    width: 300px;
+}
+.ctrStyle20
+{
+    margin: 0px;
+    padding: 1px;
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    width: 20px;
+}
+.patDemoIF1
+{
+    padding: 14px 0px;
+    color: #FFF;
+    background-color: #2E4d7B;
+    font-family: Sans-Serif;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    behavior: url(border-radius.htc);
+}
+.patDemoIF2
+{
+    background-color: #448ccb;
+    vertical-align: middle;
+    padding: 10px 0px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    behavior: url(border-radius.htc);
+}
+.patDemoIF2det
+{
+    color: #c9ddee;
+    font-size: 9px;
+    font-weight: bold;
+}
+.modsLstTitle
+{
+    font-family: sans-serif;
+    font-size: large;
+    font-variant: normal;
+    font-weight: bold;
+    color: #448ccb;
+    text-transform: uppercase;
+}
+.rndRadius10
+{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    ccborderradius: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 1px;
+    border-color: #c9ddee;
+    border-style: solid;
+    behavior: url(border-radius.htc);
+}
+.rndPage
+{
+    background-color: #FFF;
+    /*
+    border-style: none solid solid solid;
+    border-color: #003471;
+    border-width: 1px;
+    -webkit-border-bottom-left-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    -moz-border-radius-bottomright: 20px;
+    behavior: url(border-radius.htc);
+    */
+}
+.sqrBox
+{
+    margin: 0 auto;
+    color: #000000;
+    width: 90%;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #c1c1c1;
+    background-color: #ffffff;
+}
+.sectTitle
+{
+    color: #2e4d7b;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 13px; /*font-weight:bold;*/
+    padding: 0px 20px;
+}
+/* --- report styles -- */
+.fontDearParagraph
+{
+    font-weight: normal;
+    font-size: 12px;
+    color: black;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontGoodNewsHeader
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: blue;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontGoodNewsFlags
+{
+    font-weight: normal;
+    font-size: 12px;
+    color: black;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontCriticalHeader
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: blue;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontCriticalItemsFlags
+{
+    font-weight: normal;
+    font-size: 12px;
+    color: black;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontHighPriorityHeader
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: blue;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontHiPriorityItemsFlags
+{
+    font-weight: normal;
+    font-size: 12px;
+    color: black;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontTopicHeader
+{
+    font-weight: normal;
+    font-size: 14px;
+    color: blue;
+    font-family: geneva,verdana,tahoma,arial;
+}
+.fontTopicItemsFlags
+{
+    font-weight: normal;
+    font-size: 12px;
+    color: black;
+    font-family: geneva,verdana,tahoma,arial;
+}
+
+/*--popup--*/
+#blanket
+{
+    background-color: #111;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    position: fixed;
+    z-index: 9001;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+#popupUsrLookup
+{
+    position: fixed;
+    background-color: #eeeeee;
+    width: 1000px;
+    height: 500px;
+    z-index: 9002;
+}
+
+#popupPatLookup
+{
+    position: fixed;
+    background-color: #eeeeee;
+    width: 500px;
+    height: 500px;
+    z-index: 9002;
+}
+
+#popupPortalLookup
+{
+    position: fixed;
+    background-color: #eeeeee;
+    width: 500px;
+    height: 500px;
+    z-index: 9002;
+}
+
+#popupLogin
+{
+    position: fixed;
+    background-color: #eeeeee;
+    width: 400px;
+    height: 200px;
+    z-index: 9002;
+}
+
+
+/*--- POPUPS DIVS ---*/
+
+.divWindowLike
+{
+    position: fixed;
+    z-index: 9100;
+    /*background: #FFF url("../Images/backYellowGrad.png") repeat-x top;*/
+    border: thin solid #EEA70F;
+}
+
+.topBar
+{
+    height: 30px;
+}
+
+.barTitle
+{
+    color: #003C7B;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    padding: 4px 5px 0px 5px;
+    float: left;
+}
+
+.barIcon
+{
+    float: left;
+    margin: 6px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.windowContents
+{
+    overflow: auto;
+    margin: 2px auto;
+}
+
+/*--- TOP HORIZONTAL TOOLBAR ---*/
+
+.tbBox
+{
+    background: #DEDEDE;
+    display: block;
+    text-align: center;
+    padding: 3px;
+    padding-top: 10px;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #fff;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.tbBox:hover
+{
+    background: #BABABA;
+    color: #fff;
+}
+
+.tbIcon
+{
+    display: block;
+    text-align: left;
+    float: left;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: .75em;
+}
+
+.tbIcon:hover
+{
+    color: rgb(0, 0, 255);
+}
+
+.tbBar
+{
+    /*margin-bottom: 5px; */
+    height: 42px;
+    background: #f3efec;
+    border-bottom: 1px solid #e3dad1;
+}
+
+
+
+.lnbBox
+{
+    background: #DEDEDE;
+    display: block;
+    text-align: center;
+    padding: 3px;
+    padding-top: 10px;
+    width: 160px;
+    height: 40px;
+    border: 1px solid #fff;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.lnbBox:hover
+{
+    background: #BABABA;
+    color: #fff;
+}
+
+.logoff-bar
+{
+	font: normal .75em Arial, Verdana, Helvetica, sans-serif;
+	display: block;
+	margin: 5px;
+	color: #000;
+	padding: 5px 10px;
+	border: 1px solid #e0e0e0;
+	background: #E4F2F5;
+}
+
+/*
+.logoff-bar a
+{
+	width: 50px;
+	font-weight: bold;
+	text-decoration: none;
+	padding:1px 6px;
+	color: #fff;
+	background: #28587A;
+}
+
+.logoff-bar a:hover
+{
+	background: #FA2007;
+}
+*/
+
+/* --- Forms Style -- */
+.label
+{
+    color: rgb(7, 76, 131);
+    font: 11px Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+.mGrid .label
+{
+    color: rgb(7, 76, 131);
+    font: 11px Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+/*
+-------------------------------------------
+  General Style Rules
+-------------------------------------------
+*/
+
+.pageWrapper
+{
+    padding: 10px;
+}
+
+.cell_label
+{
+    text-align: right;
+    width: 120px;
+}
+
+.wrapper
+{
+    clear: both;
+    padding: 1px;
+}
+
+.container
+{
+    float: left;
+    margin-right: 10px;
+    /*height: 14px;*/
+}
+
+.navLinks
+{
+    padding: 4px 15px 4px 5px;
+    margin-right: 5px;
+    border: 1px solid #8692c4;
+    background: #8692c4;
+    text-align: center;
+    float: left;
+    width: auto;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    behavior: url(border-radius.htc);
+}
+
+.navLinks a
+{
+    text-decoration: none;
+    font-size: smaller;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navLinks:hover
+{
+    background: #38498f;
+}
+
+/*left patient navigation*/
+
+a.patnavLink:link, a.patnavLink:active, a.patnavLink:visited
+{	
+	padding: 4px 15px 4px 5px;
+    color:White;  
+    font-size: larger; 
+    font-weight: bold;
+    text-decoration: none; 
+    background: #8692c4;
+    display:block;
+}
+a.patnavLink:hover, a.patnavLink:active
+{
+	background: #38498f;
+}
+
+.divCurrentTreatment
+{
+    color:White;  
+    font-size: smaller; 
+    font-weight: bold;
+    text-decoration: none; 
+    background: #8692c4;
+    display:block;
+}
+
+/* force Crysta report's toolbar width */
+.crtoolbar
+{
+    width: 773px;
+}

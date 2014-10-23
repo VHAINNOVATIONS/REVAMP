@@ -1,0 +1,331 @@
+A.global_nav-01:link
+{
+    DISPLAY: block;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #000066;
+    PADDING-TOP: 6px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    WHITE-SPACE: nowrap;
+    LETTER-SPACING: 1px;
+    BACKGROUND-COLOR: #cccccc;
+    TEXT-DECORATION: none
+}
+A.global_nav-01:visited
+{
+    DISPLAY: block;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #000066;
+    PADDING-TOP: 6px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    WHITE-SPACE: nowrap;
+    LETTER-SPACING: 1px;
+    BACKGROUND-COLOR: #cccccc;
+    TEXT-DECORATION: none
+}
+A.global_nav-01:hover
+{
+    BORDER-RIGHT: #ffffff 2px solid;
+    DISPLAY: block;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    PADDING-BOTTOM: 6px;
+    BORDER-LEFT: #ffffff 2px solid;
+    COLOR: #999999;
+    PADDING-TOP: 6px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    LETTER-SPACING: 1px;
+    BACKGROUND-COLOR: #eeeeee;
+    TEXT-DECORATION: none
+}
+A.global_left_nav2:link
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav2:visited
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav2:hover
+{
+    BORDER-TOP: #ffffff 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #91B3C1;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #ffffff 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c3cdd5;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_2top:link
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_2top:visited
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_2top:hover
+{
+    BORDER-TOP: #c3cdd5 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #606E7F;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #ffffff 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c3cdd5;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_2bot:link
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_2bot:visited
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_2bot:hover
+{
+    BORDER-TOP: #ffffff 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #91B3C1;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #c3cdd5 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c3cdd5;
+    TEXT-DECORATION: none
+}
+A.global_left_nav2:link
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav2:visited
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav2:hover
+{
+    BORDER-TOP: #ffffff 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #91B3C1;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #ffffff 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c3cdd5;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_3top:link
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    list-style:inherit;
+    PADDING-BOTTOM: 0px;
+    COLOR: #000000;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_3top:visited
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    list-style:inherit;
+    PADDING-BOTTOM: 0px;
+    COLOR: #000000;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_3top:hover
+{
+    BORDER-TOP: #c3cdd5 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    list-style:inherit;
+    PADDING-BOTTOM: 0px;
+    COLOR: #000000;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #ffffff 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c3cdd5;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_3bot:link
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    COLOR: #000000;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_3bot:visited
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #000000;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
+A.global_left_nav_3bot:hover
+{
+    BORDER-TOP: #ffffff 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #91B3C1;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #c3cdd5 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #c3cdd5;
+    TEXT-DECORATION: none
+}
+.dining_titles
+{
+    BORDER-TOP: #91B3C1 2px solid;
+    DISPLAY: block;
+    PADDING-LEFT: 20px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 6px;
+    COLOR: #ffffff;
+    PADDING-TOP: 6px;
+    BORDER-BOTTOM: #91B3C1 2px solid;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #91B3C1;
+    TEXT-DECORATION: none
+}
